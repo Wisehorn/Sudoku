@@ -1,0 +1,49 @@
+.controls .btn {
+    margin: 10px;
+    width: 150px;
+}
+
+.messagebox {
+    min-height: 75px;
+    font-size: 150%;
+}
+
+.board {
+    display: inline-grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    grid-auto-flow: row;
+}
+
+.board__cell {
+    border: 1px solid grey;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.board__cell--readonly {
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.board__cell--odd-square {
+    background-color: pink;
+    color: black;
+}
+
+.board__cell--selected {
+    background-color: #00B4FF;
+}
+
+.board__cell--flip {
+    color: transparent;
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+}
